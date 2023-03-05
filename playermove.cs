@@ -10,6 +10,7 @@ public class playermove : MonoBehaviour
     public bool InputD;
     public float szybkosc = 5f;
 
+
     // Update is called once per frame
     void Update()
     {
