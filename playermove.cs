@@ -3,6 +3,7 @@ using UnityEngine;
 public class playermove : MonoBehaviour
 {
     public GameObject gracz;
+    public Sprite graczStojacy;
     public Rigidbody2D rb;
     public bool InputW;
     public bool InputA;
@@ -14,6 +15,13 @@ public class playermove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (InputW || InputA || InputS || InputD)
+        {
+            gracz.GetComponent<Animator>().enabled = true;
+        }else {
+            gracz.GetComponent<Animator>().enabled = false;
+            gracz.GetComponent<SpriteRenderer>().sprite = graczStojacy;
+        }
         if (Input.GetKey(KeyCode.W)) {
             InputW = true;
         } else {
