@@ -1,53 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class playermove : MonoBehaviour
 {
     public GameObject gracz;
-    public GameObject camera;
-    public float szybkosc = 0.03f;
-
-    void OnCollisionEnter2D(Collision2D collision)
-{
-
-        Rigidbody2D rb = gracz.GetComponent<Rigidbody2D>();
-        rb.velocity = -rb.velocity;
-}
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Rigidbody2D rb;
+    public bool InputW;
+    public bool InputA;
+    public bool InputS;
+    public bool InputD;
+    public float szybkosc = 5f;
 
     // Update is called once per frame
     void Update()
     {
-        camera.transform.position = new Vector3(camera.transform.position.x, gracz.transform.position.y, camera.transform.position.z);
-    if(Input.GetKey(KeyCode.W)){
+        if (Input.GetKey(KeyCode.W)) {
+            InputW = true;
+        } else {
+			InputW = false;
+        }
 
-       gracz.transform.position = new Vector3(gracz.transform.position.x, gracz.transform.position.y + szybkosc , gracz.transform.position.z);
+        if (Input.GetKey(KeyCode.A)) {
+            InputA = true;
+        } else {
+			InputA = false;
+        }
+        
+		if (Input.GetKey(KeyCode.S)) {
+            InputS = true;
+        } else {
+			InputS = false;
+        }
 
-    }else{
-    if(Input.GetKey(KeyCode.S))
-   {
-    gracz.transform.position = new Vector3(gracz.transform.position.x , gracz.transform.position.y - szybkosc, gracz.transform.position.z);
-    }else {
-        if(Input.GetKey(KeyCode.D))
-   {
-    gracz.transform.position = new Vector3(gracz.transform.position.x + szybkosc , gracz.transform.position.y, gracz.transform.position.z);
-    }else{
-       if(Input.GetKey(KeyCode.A))
-   {
-    gracz.transform.position = new Vector3(gracz.transform.position.x - szybkosc, gracz.transform.position.y, gracz.transform.position.z);
+        if (Input.GetKey(KeyCode.D)) {
+            InputD = true;
+        } else {
+			InputD = false;
+        }
 
-    } 
-    }
-
-    }
-
-   }
-   
+        if (InputW) {
+			rb.MovePosition(new Vector2(transform.position.x, transform.position.y + szybkosc * Time.deltaTime));
+		}
+		if (InputA) {
+            rb.MovePosition(new Vector2(transform.position.x - szybkosc * Time.deltaTime, transform.position.y));
+        }
+		if (InputS) {
+            rb.MovePosition(new Vector2(transform.position.x, transform.position.y - szybkosc * Time.deltaTime));
+        }
+		if (InputD) {
+            rb.MovePosition(new Vector2(transform.position.x + szybkosc * Time.deltaTime, transform.position.y));
+        }
     }
 }
