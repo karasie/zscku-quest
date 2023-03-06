@@ -11,8 +11,7 @@ public class playermove : MonoBehaviour
     public bool InputD;
     public float szybkosc = 5f;
 
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (InputW || InputA || InputS || InputD)
@@ -22,6 +21,7 @@ public class playermove : MonoBehaviour
             gracz.GetComponent<Animator>().enabled = false;
             gracz.GetComponent<SpriteRenderer>().sprite = graczStojacy;
         }
+
         if (Input.GetKey(KeyCode.W)) {
             InputW = true;
         } else {
@@ -49,7 +49,7 @@ public class playermove : MonoBehaviour
         if (InputW) {
 			rb.MovePosition(new Vector2(transform.position.x, transform.position.y + szybkosc * Time.deltaTime));
 		}
-		if (InputA) {
+		if (InputA && !InputW) {
             rb.MovePosition(new Vector2(transform.position.x - szybkosc * Time.deltaTime, transform.position.y));
         }
 		if (InputS) {
@@ -58,5 +58,22 @@ public class playermove : MonoBehaviour
 		if (InputD) {
             rb.MovePosition(new Vector2(transform.position.x + szybkosc * Time.deltaTime, transform.position.y));
         }
+
+        // Góra-Prawo
+        if (InputW && InputA) {
+			rb.MovePosition(new Vector2(transform.position.x - szybkosc* Time.deltaTime, transform.position.y + szybkosc * Time.deltaTime));
+		}
+        // Góra-Lewo
+        if (InputW && InputD) {
+			rb.MovePosition(new Vector2(transform.position.x + szybkosc* Time.deltaTime, transform.position.y + szybkosc * Time.deltaTime));
+		}
+        // Dół-Prawo
+        if (InputS && InputA) {
+			rb.MovePosition(new Vector2(transform.position.x - szybkosc* Time.deltaTime, transform.position.y - szybkosc * Time.deltaTime));
+		}
+        // Dół-Lewo
+        if (InputS && InputD) {
+			rb.MovePosition(new Vector2(transform.position.x + szybkosc* Time.deltaTime, transform.position.y - szybkosc * Time.deltaTime));
+		}
     }
 }
