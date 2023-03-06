@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 38752139}
   - component: {fileID: 38752138}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Nazwa Postaci
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 38752136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 874385043}
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.041381624, y: 0.659394}
   m_AnchorMax: {x: 0.30182895, y: 0.93426263}
-  m_AnchoredPosition: {x: 1, y: -0.5}
-  m_SizeDelta: {x: 6.4512024, y: -2.1732998}
+  m_AnchoredPosition: {x: -250, y: 15}
+  m_SizeDelta: {x: 342.4853, y: 120.2492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &38752138
 MonoBehaviour:
@@ -182,17 +182,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 724bb9d38cfb4ab4ba446ca3c80f67be, type: 3}
+    m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: NAZWA
 --- !u!222 &38752139
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 764645762}
   - component: {fileID: 764645761}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: Dialog tekst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -520,7 +520,7 @@ RectTransform:
   m_GameObject: {fileID: 764645759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 874385043}
@@ -528,8 +528,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21300001, y: 0.19852535}
   m_AnchorMax: {x: 0.9295527, y: 0.624}
-  m_AnchoredPosition: {x: -1.6842957, y: 0.8903885}
-  m_SizeDelta: {x: -0.31750488, y: -0.8919983}
+  m_AnchoredPosition: {x: -173.44098, y: 1.4530029}
+  m_SizeDelta: {x: 8685.065, y: 560.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764645761
 MonoBehaviour:
@@ -552,17 +552,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: dcfb3f82cfc61b44089682739018e06b, type: 3}
+    m_FontSize: 250
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: NAZWA
 --- !u!222 &764645762
@@ -621,12 +621,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -712,7 +712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.33200002}
-  m_AnchoredPosition: {x: 0.25, y: 0.9342041}
+  m_AnchoredPosition: {x: -0.25012207, y: 0.9342041}
   m_SizeDelta: {x: 0.5, y: 1.8684769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &874385044
@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 1191660313}
   - component: {fileID: 1191660312}
   m_Layer: 5
-  m_Name: protag
+  m_Name: Gracz
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -788,8 +788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24927714, y: 0.35000002}
   m_AnchorMax: {x: 0.64816856, y: 1}
-  m_AnchoredPosition: {x: 2.4873962, y: -4.6123}
-  m_SizeDelta: {x: 5.139496, y: 9.2247}
+  m_AnchoredPosition: {x: -536.15, y: -0.000015258789}
+  m_SizeDelta: {x: 5.14, y: 6.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1191660312
 MonoBehaviour:
@@ -1124,7 +1124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.000061035156}
   m_SizeDelta: {x: 0, y: 0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619671726
