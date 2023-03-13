@@ -20,6 +20,7 @@ public class dialog : MonoBehaviour
         napis.text = linie[linia];
         linia++;
         gracz.GetComponent<playermove>().enabled = false;
+        gracz.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     void Update()
@@ -34,6 +35,7 @@ public class dialog : MonoBehaviour
                 keyPressed = false;
             } else {
                 gracz.GetComponent<playermove>().enabled = true;
+                gracz.GetComponent<SpriteRenderer>().enabled = true;
                 gameObject.SetActive(false);
             }
         }
